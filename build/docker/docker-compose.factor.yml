@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  factor:
+    build:
+      context: .
+      dockerfile: ./build/docker/node/Dockerfile
+      args:
+        - NODE_ENV=development
+    command: npx factor dev # use this prop to overwrite command the container is supposed to start with. e.g.: npm run build
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/var/app/src
+      - node_modules:/var/app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - mongo

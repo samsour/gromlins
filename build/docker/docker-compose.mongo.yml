@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo:4.2
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+#      - MONGO_INITDB_DATABASE=factor
+    ports:
+      - 27017:27017
+    volumes:
+      - ./build/docker/mongo/local:/data/db
