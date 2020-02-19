@@ -24,3 +24,7 @@ attach_logs:
 
 container_bash:
 	docker exec -it $(ARGUMENTS) /bin/bash
+
+# the network ip of mongo container is neccessary to connect to it via mongo_client
+container_info:
+	docker inspect $(ARGUMENTS)
