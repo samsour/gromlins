@@ -7,8 +7,10 @@ ARGUMENTS=$(filter-out $@,$(MAKECMDGOALS))
 
 
 start:
-	docker-compose up --force-recreate -d
+	DB_ENVIRONMENT=local docker-compose up --force-recreate -d
 
+start_production:
+	docker-compose up --force-recreate -d
 
 start_mongo_client:
 	docker-compose -f ./build/docker/docker-compose.mongoclient.yml up --force-recreate

@@ -10,4 +10,4 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./build/docker/mongo/local:/data/db
+      - ./build/docker/mongo/${DB_ENVIRONMENT:-production}:/data/db
