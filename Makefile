@@ -6,6 +6,18 @@
 ARGUMENTS=$(filter-out $@,$(MAKECMDGOALS))
 
 
+install:
+	make init_env
+	docker-compose build --no-cache --force-rm
+
+install_on_host:
+	make init_env
+	npm i
+	npx factor setup
+
+init_env:
+	([ ! -f "./.env" ] && cp .env.example .env || echo ".env already exists. moving on...")
+
 start:
 	DB_ENVIRONMENT=local docker-compose up --force-recreate -d
 
