@@ -2,6 +2,25 @@
 
 ## Built with [Factor](https://factor.dev)
 
+ Built with [Factor](https://factor.dev)
+
+## Setup (Docker)
+
+Make sure you have installed [Docker](https://docs.docker.com/).
+
+```bash
+# Install Project
+make install
+
+# Start with docker
+make start
+
+# Append console logs to the active terminal
+make attach_logs
+```
+
+## Setup (Manual)
+
 ```bash
 # Install dependencies
 npm install
