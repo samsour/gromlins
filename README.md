@@ -1,10 +1,13 @@
 # gromlin-website
 
-_Gromlin website_
-
 ## Built with [Factor](https://factor.dev)
 
 ```bash
+# Install dependencies
+npm install
+# or
+yarn install
+
 # Run development server
 npx factor dev
 
