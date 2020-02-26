@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  mongoclient:
+    image: mongoclient/mongoclient
+    ports:
+      - 3001:3000
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/factor
