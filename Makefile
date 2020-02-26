@@ -13,7 +13,6 @@ install:
 install_on_host:
 	make init_env
 	npm i
-	npx factor setup
 
 init_env:
 	([ ! -f "./.env" ] && cp .env.example .env || echo ".env already exists. moving on...")
