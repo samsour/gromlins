@@ -1,8 +1,32 @@
-export default {
-  // ...other component code
+<template>
+  <div class="landing-page">
+    <div class="feature">
+      <div class="feature-content">
+        <h1>{{ settings.pageHeading }}</h1>
+      </div>
+    </div>
+    <div class="feature-boxes">
+      <div v-for="(box, i) in settings.boxes" :key="i" class="box">
+        <div v-if="box.icon" class="box-icon">
+          Image id/src: {{box.icon[0]}}
+          <img :src="box.icon[0]" />
+        </div>
+        <div class="box-heading">{{ box.heading }}</div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { stored } from "@factor/api";
+import Vue from "vue";
+export default Vue.extend({
   computed: {
     post() {
       return stored("post") || {}
+    },
+    settings() {
+      return this.post.settings || {}
     }
   },
   templateSettings() {
@@ -36,5 +60,5 @@ export default {
       }
     ]
   }
-  // ...other component code
-}
+})
+</script>

@@ -11,8 +11,9 @@ addContentRoute({
   component: () => import("./views/Page")
 })
 
+// slug must match the template name in kebab-case
 addPageTemplate({
-  name: "My Landing Page",
-  slug: "landing-page",
-  component: () => import("./templates/LandingPage")
+  name: "Custom Landingpage",
+  slug: "custom-landingpage",
+  component: () => import("./templates/Landingpage")
 })
