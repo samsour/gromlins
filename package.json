@@ -12,6 +12,9 @@
     "url": "https://basic-example.factor.dev"
   },
   "dependencies": {
-    "@factor/core": "^1.4.1"
+    "@factor/core": "^1.4.2",
+    "@factor/plugin-contact-form": "^1.3.11",
+    "@factor/plugin-notify": "^1.3.12",
+    "@factor/plugin-seo": "^1.3.5"
   }
 }
